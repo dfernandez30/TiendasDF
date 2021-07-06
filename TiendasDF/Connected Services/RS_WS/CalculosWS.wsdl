@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="clubBronce">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="clubBronceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="clubBronceResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="clubOro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="clubOroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="clubOroResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="clubDiamante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="clubDiamanteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="clubDiamanteResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="clubPlatino">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="clubPlatinoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="clubPlatinoResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sinConvenio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sinConvenioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sinConvenioResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="horasExtra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="horasTrabajadas" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="valorHora" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="horasExtraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="horasExtraResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="clubBronceSoapIn">
+    <wsdl:part name="parameters" element="tns:clubBronce" />
+  </wsdl:message>
+  <wsdl:message name="clubBronceSoapOut">
+    <wsdl:part name="parameters" element="tns:clubBronceResponse" />
+  </wsdl:message>
+  <wsdl:message name="clubOroSoapIn">
+    <wsdl:part name="parameters" element="tns:clubOro" />
+  </wsdl:message>
+  <wsdl:message name="clubOroSoapOut">
+    <wsdl:part name="parameters" element="tns:clubOroResponse" />
+  </wsdl:message>
+  <wsdl:message name="clubDiamanteSoapIn">
+    <wsdl:part name="parameters" element="tns:clubDiamante" />
+  </wsdl:message>
+  <wsdl:message name="clubDiamanteSoapOut">
+    <wsdl:part name="parameters" element="tns:clubDiamanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="clubPlatinoSoapIn">
+    <wsdl:part name="parameters" element="tns:clubPlatino" />
+  </wsdl:message>
+  <wsdl:message name="clubPlatinoSoapOut">
+    <wsdl:part name="parameters" element="tns:clubPlatinoResponse" />
+  </wsdl:message>
+  <wsdl:message name="sinConvenioSoapIn">
+    <wsdl:part name="parameters" element="tns:sinConvenio" />
+  </wsdl:message>
+  <wsdl:message name="sinConvenioSoapOut">
+    <wsdl:part name="parameters" element="tns:sinConvenioResponse" />
+  </wsdl:message>
+  <wsdl:message name="horasExtraSoapIn">
+    <wsdl:part name="parameters" element="tns:horasExtra" />
+  </wsdl:message>
+  <wsdl:message name="horasExtraSoapOut">
+    <wsdl:part name="parameters" element="tns:horasExtraResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CalculosWSSoap">
+    <wsdl:operation name="clubBronce">
+      <wsdl:input message="tns:clubBronceSoapIn" />
+      <wsdl:output message="tns:clubBronceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="clubOro">
+      <wsdl:input message="tns:clubOroSoapIn" />
+      <wsdl:output message="tns:clubOroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="clubDiamante">
+      <wsdl:input message="tns:clubDiamanteSoapIn" />
+      <wsdl:output message="tns:clubDiamanteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="clubPlatino">
+      <wsdl:input message="tns:clubPlatinoSoapIn" />
+      <wsdl:output message="tns:clubPlatinoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sinConvenio">
+      <wsdl:input message="tns:sinConvenioSoapIn" />
+      <wsdl:output message="tns:sinConvenioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="horasExtra">
+      <wsdl:input message="tns:horasExtraSoapIn" />
+      <wsdl:output message="tns:horasExtraSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CalculosWSSoap" type="tns:CalculosWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="clubBronce">
+      <soap:operation soapAction="http://tempuri.org/clubBronce" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clubOro">
+      <soap:operation soapAction="http://tempuri.org/clubOro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clubDiamante">
+      <soap:operation soapAction="http://tempuri.org/clubDiamante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clubPlatino">
+      <soap:operation soapAction="http://tempuri.org/clubPlatino" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sinConvenio">
+      <soap:operation soapAction="http://tempuri.org/sinConvenio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="horasExtra">
+      <soap:operation soapAction="http://tempuri.org/horasExtra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CalculosWSSoap12" type="tns:CalculosWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="clubBronce">
+      <soap12:operation soapAction="http://tempuri.org/clubBronce" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clubOro">
+      <soap12:operation soapAction="http://tempuri.org/clubOro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clubDiamante">
+      <soap12:operation soapAction="http://tempuri.org/clubDiamante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clubPlatino">
+      <soap12:operation soapAction="http://tempuri.org/clubPlatino" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sinConvenio">
+      <soap12:operation soapAction="http://tempuri.org/sinConvenio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="horasExtra">
+      <soap12:operation soapAction="http://tempuri.org/horasExtra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CalculosWS">
+    <wsdl:port name="CalculosWSSoap" binding="tns:CalculosWSSoap">
+      <soap:address location="https://localhost:44308/CalculosWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CalculosWSSoap12" binding="tns:CalculosWSSoap12">
+      <soap12:address location="https://localhost:44308/CalculosWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
